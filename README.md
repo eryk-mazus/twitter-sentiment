@@ -2,7 +2,7 @@
 
 * [data analysis](analysis.ipynb) 
 * [preprocessing functions](./src/preprocessing.py)
-* [inference script](inference.ipynb)
+* [prediction](prediction.ipynb)
 
 ## The Process
 
@@ -56,7 +56,7 @@ Below please find the summary of the analysis:
 * There are also quotes that can influence the sentiment assigned by a model to tweets. For instance the quote can have the positive sentiment while the overall tweet is rather neutral:
 >Jan explains it’s something “which is very joyful, very grounding, and for writers to have a child in their lives is very very nice”
 
-All things considered, there is a lot of noise in the data that can potentially hinder the inference.
+All things considered, there is a lot of noise in the data that can potentially hinder the predictions.
 
 ### Text preprocessing
 
@@ -72,13 +72,13 @@ As a result of data analysis, I've decided to clean the dataset. Taking into acc
 
 Punctuations, emoticons, stop words, lemmatization/stemming were not removed/replaced/applied because the selected model can handle the text as is.
 
-### Inference
+### Prediction
 
 For the sentiment prediction I've used the [roBERTa-base model](https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment). This particular implementation was trained on  ~58M tweets and finetuned for tasks such as: sentiment analysis, irony detection, hate detection and others.
 
 explain ...
 
-The inference was performed entirely on Google Colab using the provided GPU, which allowed me to classify 100k tweets in around 5 minutes. Each tweet in the dataset was assigned with the probabilities of belonging to negative, neutral and positive category. To choose the final category, I've simply chosen the class with the highest on. 
+The prediction was performed entirely on Google Colab using the provided GPU, which allowed me to classify 100k tweets in around 5 minutes. Each tweet in the dataset was assigned with the probabilities of belonging to negative, neutral and positive category. To choose the final category, I've simply chosen the class with the highest on. 
 
 ### Results
 
