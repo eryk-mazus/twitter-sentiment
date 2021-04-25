@@ -79,7 +79,7 @@ Punctuations, emoticons, stop words, lemmatization/stemming were not removed/rep
 
 For the sentiment prediction I've used the [roBERTa-base model](https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment). This particular implementation was trained on  ~58M tweets and finetuned for tasks such as: sentiment analysis, irony detection, hate detection and others.
 
-explain ...
+The roBERTa is a model that belongs to the family of models called Transformers. These models are powerful at processing sequences (for instance sequences of words in sentences) and are capable of making connections between relevant points in the sequences, even if these points are far apart from each other. There are also faster to train than older types of models, for example RNNs, because they enable parallelization.
 
 The prediction was performed entirely on Google Colab using the provided GPU, which allowed me to classify 100k tweets in around 5 minutes. Each tweet in the dataset was assigned with the probabilities of belonging to negative, neutral and positive category. To choose the final category, I've simply chosen the class with the highest on. 
 
