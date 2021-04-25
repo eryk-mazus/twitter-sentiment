@@ -1,4 +1,4 @@
-# Sentiment Analysis of Twitter tweets
+# Sentiment Analysis of tweets
 
 * [data analysis](analysis.ipynb) 
 * [preprocessing functions](./src/preprocessing.py)
