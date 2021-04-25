@@ -1,4 +1,4 @@
-*.csv
-*.xlsx
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+100ktweets.csv
+100ktweets.xlsx

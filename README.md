@@ -37,6 +37,9 @@ It turned out that the length of this tweet is exactly equal to 140 characters, 
 
 ![Length distribution](/img/length-dist.png)
 
+Since later on in the process I remove targets (@user) from the data, tweets like that will be completly removed from the dataset:
+>RT @AltCoinCollege: @21blacky @otisa502 @GonzaloMoraga @thomas_quinlan @CelsiusNetwork @Crypto_Flippin @celsius_hub @celsianos @Mashinsky @…
+
 Given more time for a task I would probably use Twitter API to re-download the 140 characters tweets.
 
 #### Data analysis
@@ -86,39 +89,34 @@ The distribution of the predicted sentiment is as follows:
 
 | Polarity      | Count         |
 | ------------- |:-------------:|
-| neutral       | 44 719        |
-| positive      | 39 632        |
-| negative      | 15 519        |
+| neutral       | 44 740        |
+| positive      | 39 664        |
+| negative      | 15 528        |
 
 ![Sentiment distribution](/img/sentiment.png)
 
-Examples of raw tweets with the highest positive score:
+Five raw tweets with the highest positive score:
 
-> Excited to share my #career journey @St Albans School and help students think about career choices @Founders4School
+> RT @MTBracken: Happy Birthday. I am so glad you're growing up and thriving. Onwards! https://t.co/pxVaJV9UjF
 
-> It was wonderful to meet Dame Sian @DameSianP - last night. Thank you Sian for chatting and being so enthusiastic about your work, my work and #bafta #wales
+> It was wonderful to meet Dame Sian @DameSianP - last night. Thank you Sian for chatting and being so enthusiastic about your work, my work and #bafta #wales https://t.co/AeO7fg7ceA
 
-> While I'm a fan of candor, honesty and transparency in business (and life TBH) the 3 people who have suggested the radical candor method to me have always used it as an excuse to act like £$%&holes
+> Woohoo! Super excited to be supporting @NASMA_uk again - it's gonna be awesome #NSMW21 https://t.co/lqYnVfOhLa
 
-While two first examples seems to be assigned correctly, the third one is rather negative. It's good advertiserial example.
+> Happy Birthday to our wonderful colleague @FoxyNewby - you are loved by us all! Thank you for being everything you do &amp; for being an absolute ray of sunshine! Happy desk day :) https://t.co/rUpZxGFODX
 
-Examples of raw tweets with the highest negative score:
+> RT @Dr_Black: So excited and honoured to be hosting the first ever @DameStephanie_ lecture @comp_sci_durham @durham_uni this evening ❤️????…
 
-> The most important lesson I’ve learned about career advancement is that you need to ask for that promotion
+Five raw tweets with the highest negative score:
+> RT @realsarahpolley: 1/ This is the worst movie I have ever seen.
 
-> Your site is appalling and it's impossible to get any information. PLEASE help! This was due weeks ago.
+> Watching this #COVIDIOTS in #TrafalgarSquare is a disgrace. Cant believe my taxes are going to be wasted on these idiots. Infuriating.
 
-> That is called "science"
-> So already done and tested again and again over the last 150 years
-> Try to keep up - please
+> Hot damn this is way, way worse than I ever imagined. Ubisoft what the hell? This is an embarrassment to the whole industry https://t.co/LwNl5hx4m1	
 
-### TO-DO:
+> Battling a minor teenager JUUL addiction\n\nThey are such a bunch of fucking assholes. Can't wait for the company to implode and top executives to be jailed\n\nThey preyed aggressively on kids\n\nProduct design, flavours, marketing etc, and packed, PACKED! their shit full of nicotine
 
-- [ ] Some preprocessed examples have lower, correct probability in my pipeline than raw examples in API
-- [ ] Improve the text preprocessing - e.g. spelling mistakes, testing more simple pipelines
-- [ ] I was unable to fit few tweets to a tokenizer, the prediction is done for 99 870 tweets 
-- [ ] Clean and comment the code more 
-- [ ] Try other models 
+> RT @AndrewDessler: This idea is so f****ing stupid that I cannot believe even one drop of @nytimes ink was wasted on it. In no way is this…	
 
 ## References:
 
